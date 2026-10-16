@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Escuela de Natación Tupiza – Piscina Acquasur</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<div class="contenedor">
+
+<!-- 1. BANNER -->
+<header class="banner">
+<div class="banner-contenido">
+<img src="img/logo.jpg" alt="Logotipo Escuela de Natación Tupiza">
+<div>
+<p class="sup">SAUNA – PISCINA ACQUASUR</p>
+<h1>Escuela de Natación Tupiza</h1>
+<span class="etiqueta">Aprendizaje de la natación</span>
+</div>
+</div>
+</header>
+
+<!-- 3. MENÚ HORIZONTAL -->
+<nav class="menu" aria-label="Menú principal">
+<button class="boton-menu activo" onclick="mostrar('portada')">Portada</button>
+<button class="boton-menu" onclick="mostrar('crol')">Crol (Libre)</button>
+<button class="boton-menu" onclick="mostrar('espalda')">Espalda</button>
+<button class="boton-menu" onclick="mostrar('pecho')">Pecho</button>
+<button class="boton-menu" onclick="mostrar('mariposa')">Mariposa</button>
+</nav>
+
+<!-- 4. CONTENIDO -->
+<div class="cuerpo">
+<aside class="lateral izq" aria-label="Anuncios izquierda">
+<img src="img/galeria1.jpg" alt="Anuncio 1">
+<img src="img/galeria2.jpg" alt="Anuncio 2">
+<img src="img/galeria3.jpg" alt="Anuncio 3">
+<img src="img/galeria4.jpg" alt="Anuncio 4">
+</aside>
+<main>
+
+<!-- Portada -->
+<section id="portada">
+<h2 class="titulo">¿QUIÉNES SOMOS?</h2>
+<div class="row g-4 mt-1 mb-4">
+<div class="col-12 col-md-5"><img src="img/galeria8.jpg" alt="Escuela de Natación Tupiza" class="img-fluid foto"></div>
+<div class="col-12 col-md-7 texto">
+<p>Somos una empresa conformada por un grupo de personas que amamos el deporte y nuestra pasión es la natación. Hemos estado inmersos en el ámbito deportivo por generaciones y queremos compartir con niños, jóvenes y adultos nuestras vivencias, así como transmitir nuestro entusiasmo para que, de acuerdo a la edad o las habilidades personales, disfruten el placer del agua.</p>
+<p>Sauna - Piscina ACQUASUR y Escuela de Natación Tupiza, comenzó como un sueño desde hace más de siete años por la necesidad de contar con un lugar dónde desarrollar los entrenamientos de un equipo competitivo con amplia libertad en un ambiente agradable y propicio. La meta se amplió a través de los treinta años de experiencia dentro de la natación que nos han dado como resultado la convicción que no existe ningún límite ni obstáculo para ser exitoso en lo que se desea, que se pueden obtener muchos beneficios a futuro, manteniendo disciplina y dedicación, ya que además de ofrecernos placer y tranquilidad, mejora la actitud y postura para enfrentarse a los retos de la vida y propicia el desarrollo de las aptitudes físicas, psicológicas y sociales adquiriendo al mismo tiempo un estilo de vida saludable.</p>
+<p class="mb-0">Estamos comprometidos con el medio ambiente, ya que nuestras instalaciones además de ser amplias y funcionales cuentan con sistemas de filtración y reciclado de agua, aprovechando al máximo el uso de luz natural que eliminan la contaminación del aire, complementando nuestro sistema de calefacción.</p>
+</div>
+</div>
+<div class="row g-4">
+<div class="col-12 col-md-6">
+<div class="card h-100 tarjeta-roja"><div class="card-body texto">
+<h3>MISIÓN</h3>
+<p class="mb-0">Nuestra misión es la enseñanza y práctica de la natación para promover las capacidades físicas y psicológicas de nuestros clientes, contribuyendo a la formación de personas íntegras, con valores personales para afrontar cualquier reto, valientes, honestas y seguras de sí mismas, cuyos principios sean el compañerismo, el esfuerzo, la constancia para el logro de sus metas y su desarrollo integral.</p>
+</div></div></div>
+<div class="col-12 col-md-6">
+<div class="card h-100 tarjeta-azul"><div class="card-body texto">
+<h3>VISIÓN</h3>
+<p class="mb-0">Ser una institución deportiva de reconocido prestigio que impulse e integre a la forma de vida de nuestros clientes la práctica de la natación, ofreciendo un servicio de calidad que cumpla con sus expectativas potencializando sus cualidades a través de programas definidos y profesores capacitados con alto nivel de responsabilidad.</p>
+</div></div></div>
+<div class="col-12">
+<div class="card tarjeta-roja"><div class="card-body texto">
+<h3 style="color:var(--azul)">FILOSOFÍA</h3>
+<p>Estamos seguros que la natación es el deporte más completo y saludable, por lo que es para toda la vida. Ayuda a desarrollar diferentes destrezas, que benefician el desarrollo de niños, jóvenes y adultos generando un mayor nivel de confianza, competitividad y seguridad en sí mismos. Es un deporte recreativo y sano, ya que no hay riesgo de sufrir algún tipo de lesión. Además, ayuda a construir habilidades necesarias para la supervivencia.</p>
+<p>El personal forma parte de la familia ACQUASUR, por lo que el respeto entre compañeros y usuarios, la responsabilidad y la comunicación abierta, son valores fundamentales dentro de nuestras instalaciones.</p>
+<p class="mb-0">Somos amigos de nuestros clientes, por lo que cada día se aprende uno del otro. Disfrutar del agua, relajarse y divertirse son parte de los objetivos de cada día.</p>
+</div></div></div>
+</div>
+</section>
+
+<!-- Estilos de nado -->
+<section id="estilo" style="display:none">
+<h2 class="titulo" id="nombreEstilo"></h2>
+<div class="d-flex flex-wrap gap-2 my-4" id="opciones">
+<button class="boton-opcion activo" onclick="elegir(0)">Posición del Cuerpo</button>
+<button class="boton-opcion" onclick="elegir(1)">Brazada</button>
+<button class="boton-opcion" onclick="elegir(2)">Patada</button>
+<button class="boton-opcion" onclick="elegir(3)">Respiración</button>
+</div>
+<div class="row g-4 align-items-start">
+<div class="col-12"><video id="video" controls playsinline></video></div>
+<div class="col-12">
+<div class="card tarjeta-roja"><div class="card-body texto">
+<h3 id="nombreOpcion" style="color:var(--azul)"></h3>
+<p class="mb-0" id="texto"></p>
+</div></div>
+</div>
+</div>
+</section>
+
+</main>
+
+<aside class="lateral der" aria-label="Anuncios derecha">
+<img src="img/galeria5.jpg" alt="Anuncio 5">
+<img src="img/galeria6.jpg" alt="Anuncio 6">
+<img src="img/galeria7.jpg" alt="Anuncio 7">
+<img src="img/galeria8.jpg" alt="Anuncio 8">
+</aside>
+
+</div>
+</div>
+
+<script src="js/script.js"></script>
+<footer class="pie">
+  © Escuela de Natación Tupiza · Piscina Acquasur
+</footer>
+</body>
+</html>

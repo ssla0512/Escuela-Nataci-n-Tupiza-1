@@ -1,0 +1,45 @@
+/* Colores del Municipio de Tupiza: rojo y azul */
+:root { --azul:#0A3A8C; --rojo:#ed1539; --fondo:#F4F7FC; --texto:#1B2540; }
+body { font-family: 'Poppins', system-ui, sans-serif; color: var(--texto); background: var(--fondo); }
+.contenedor { max-width: 1280px; margin: 0 auto; background: #fff; }
+
+/* 1. Banner */
+.banner { position: relative; min-height: 260px; background: var(--azul) url('../img/galeria8.jpg') center/cover; }
+.banner::before { content:''; position:absolute; inset:0; background: linear-gradient(90deg, var(--azul) 25%, rgba(10,58,140,.45) 100%); }
+.banner-contenido { position: relative; display:flex; flex-wrap:wrap; align-items:center; gap:24px; padding:24px 32px; }
+.banner img { width:200px; height:200px; object-fit:contain; background:#fff; border:5px solid var(--rojo); border-radius:16px; }
+.banner h1 { color:#fff; font-weight:700; font-size:44px; margin:4px 0 8px; }
+.banner .sup { color:#fff; font-weight:600; letter-spacing:2px; font-size:14px; margin:0; }
+.etiqueta { display:inline-block; background:var(--rojo); color:#fff; padding:6px 16px; border-radius:20px; }
+
+/* 2. Anuncios laterales */
+.cuerpo { display:flex; align-items:flex-start; }
+.lateral { flex:0 0 190px; width:190px; display:flex; flex-direction:column; gap:16px; padding:32px 0; background:#E3EAF7; align-self:stretch; }
+.lateral.izq { padding-left:8px; border-right:4px solid var(--rojo); }
+.lateral.der { padding-right:8px; border-left:4px solid var(--rojo); }
+.lateral img { width:174px; height:auto; border-radius:10px; border:3px solid #fff; box-shadow:0 2px 8px rgba(10,58,140,.3); }
+@media (max-width:991px) {
+  .cuerpo { flex-direction:column; align-items:stretch; }
+  .lateral { flex-basis:auto; width:auto; flex-direction:row; flex-wrap:wrap; padding:16px !important; border:0 !important; }
+  .lateral img { width:calc(50% - 8px); }
+}
+
+/* 3. Menú */
+.menu { background:var(--azul); display:flex; flex-wrap:wrap; justify-content:center; gap:8px; padding:12px 16px; }
+.boton-menu { color:#fff; font-weight:600; border:2px solid #fff; border-radius:24px; padding:8px 22px; background:transparent; }
+.boton-menu.activo { background:var(--rojo); border-color:var(--rojo); }
+
+/* 4. Contenido */
+main { flex:1; min-width:0; padding:32px; background:var(--fondo); }
+.titulo { color:var(--rojo); font-weight:700; display:inline-block; border-bottom:4px solid var(--azul); padding-bottom:4px; }
+.tarjeta-roja { border:0; border-top:6px solid var(--rojo); border-radius:12px; }
+.tarjeta-azul { border:0; border-top:6px solid var(--azul); border-radius:12px; }
+.tarjeta-roja h3, .tarjeta-azul h3 { font-weight:700; }
+.tarjeta-roja h3 { color:var(--rojo); } .tarjeta-azul h3 { color:var(--azul); }
+.texto { line-height:1.7; }
+.foto { border-radius:12px; border:4px solid var(--azul); }
+video { width:100%; max-height:520px; background:#000; border-radius:12px; border:4px solid var(--azul); }
+.boton-opcion { font-weight:600; border:2px solid var(--azul); color:var(--azul); background:#fff; border-radius:24px; padding:8px 22px; }
+.boton-opcion.activo { background:var(--azul); color:#fff; }
+/* 5. pie de documento*/
+.pie{background:var(--azul);color:#cfe0f1;border-top:4px solid var(--rojo);font-size:.9rem;text-align: center;}
